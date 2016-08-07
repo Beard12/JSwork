@@ -1,0 +1,106 @@
+<html>
+   <head>
+     <title>The Accordion and Tab plus some other stuff</title>
+     <style>
+      #accordion{
+        width:500px;
+        margin-bottom:20px;
+      }
+      #tabs{
+        width:500px;
+      }
+
+     </style>
+     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+     <script>
+      
+      $(function() {
+        $("#accordion").accordion();
+      });
+      $(function() {
+        $("#tabs").tabs();
+      });
+      $(function(){
+        $("#dialog").dialog();
+      });
+
+      $(document).ready(function(){
+      $('#launch').click(function(){
+        $('#dialog').dialog('open')
+      });
+      })
+     </script>
+   </head>
+   <body>
+    <div id="accordion">
+      <h3>Pizza Types</h3>
+      <div>
+        <ul>
+          <li>Pepperoni</li>
+          <li>Cheese</li>
+          <li>Hawaiian</li>
+          <li>Supreme</li>
+        </ul>
+      </div>
+      <h3>Hamburger Types</h3>
+      <div>
+        <ul>
+          <li>Beef</li>
+          <li>Lamb</li>
+          <li>Veggie</li>
+          <li>Turkey</li>
+        </ul>
+      </div>
+      <h3>Gyro Types</h3>
+      <div>
+        <ul>
+          <li>Beef</li>
+          <li>Lamb</li>
+          <li>Veggie</li>
+          <li>Falafel</li>
+        </ul>
+      </div>
+    </div>
+    <div id="tabs">
+     <ul>
+        <li><a href="#tabs-1">Pizza Types</a></li>
+        <li><a href="#tabs-2">Hamburger Types</a></li>
+        <li><a href="#tabs-3">Gyro Types</a></li>
+      </ul>
+      <div id="tabs-1">
+        <ul>
+          <li>Pepperoni</li>
+          <li>Cheese</li>
+          <li>Hawaiian</li>
+          <li>Supreme</li>
+        </ul>
+      </div>
+      <div id="tabs-2">
+        <ul>
+          <li>Beef</li>
+          <li>Lamb</li>
+          <li>Veggie</li>
+          <li>Turkey</li>
+        </ul>
+      </div>
+      <div id="tabs-3">
+        <ul>
+          <li>Beef</li>
+          <li>Lamb</li>
+          <li>Veggie</li>
+          <li>Falafel</li>
+        </ul>
+      </div>
+    </div>
+    <button id="launch">Click to launch a dialog box if you close it</button>
+    <div id="dialog" title="Sweeet  Dialog">
+      <p>This is a great dialog box</p>
+    </div>
+
+
+ 
+
+   </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<title>Disappearing Ninja</title>
+		<meta charset="utf-8">
+		<style>
+		
+		img{
+			width:200px;
+			height:450px;
+			margin-top: 25px;
+		}
+
+		.row{
+			height:500px;
+			width:1000px;
+		}
+
+		button{
+			display:block;
+		}
+
+		.pic{
+			width:225px;
+			height:480px;
+			display:inline-block;
+
+		}
+		</style>
+		<meta name="description" content="Ninjas dissappear">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script>
+			$(document).ready(function(){
+
+
+				$('img').click(
+					function(){
+						$(this).hide()
+					}
+				)
+				$('#restorebutton').click(
+					function(){
+						$('img').show()
+						
+					}
+				)
+
+			})
+		</script>
+	</head>
+	<body>
+			<div class="row">
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+			</div>
+			<div class="row">
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+				<div class="pic"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5VNwOqTuGq6nU3LQ2ymeTLXeIfgfZY2dIL8WiMq3l0X25cbaw" alt="ninja"></div>
+			</div>
+		
+		<button id="restorebutton">Press this button to RESTORE</button>
+
+
+
+	</body>	
+</html>

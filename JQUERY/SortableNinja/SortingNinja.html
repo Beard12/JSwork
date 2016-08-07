@@ -1,0 +1,31 @@
+<html>
+   <head>
+       <title>The Sortable Ninja</title>
+       <style>
+        #sortable { 
+          list-style-type: none; margin: 20px; padding: 0; width: 60%; 
+        }
+        #sortable li {
+          margin:10px;
+        }
+       </style>
+       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+       <script>
+        $(function() {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+  });
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li><img src ="ninja1.png"></li>
+  <li><img src ="ninja0.png"></li>
+  <li><img src ="ninja3.png"></li>
+  <li><img src ="ninja2.png"></li>
+  <li><img src ="ninja4.png"></li>
+</ul>
+</html>

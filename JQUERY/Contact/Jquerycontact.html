@@ -1,0 +1,92 @@
+<html>
+   <head>
+       <title>The Codingdojo Contact Creator</title>
+       <style>
+        #wrapper{
+          width:1000px;
+          height:500px;
+          border:1px solid black;
+          margin:20px;
+        }
+        #contact_enter{
+          width:40%;
+          height:90%;
+          border:1px solid black;
+          margin:20px;
+          display:inline-block;
+        }
+        #contact_list{
+          width:50%;
+          height:90%;
+          border:1px solid black;
+          margin:20px;
+          display:inline-block;
+          vertical-align: top;
+        }
+        form{
+          padding:20px 0px 0px 20px;
+        }
+        .listing{
+          width:90%;
+          margin:20px auto;
+          height:18%;
+          border: 1px solid black;
+        }
+
+        .contactname{
+          text-align:center;
+          margin-bottom:5px;
+        }
+        p{
+          text-align:center;
+          margin-top:0px;
+        }
+        .h4contact{
+          text-align:center;
+          margin:10px 0px;
+        }
+
+       </style>
+
+       <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script> 
+       <script>
+          $(document).ready(function(){
+            $('#f_name').focus()
+            var descrip; 
+            $('form').submit(function(){
+              descrip=$('#descrip').val()
+              $('#contact_list').append('<div class="listing"><h3 class="contactname">'+$('#f_name').val()+' '+$('#l_name').val()+'</h3><p>Click for description!</p><h4 class ="h4contact" hidden>'+descrip+'</h4></div>')
+              $('.inputarea').val('')
+
+              return false
+            })
+            $(document).on('click','.listing',function(){
+              $(this).children().hide()
+              $(this).children('h4').show()
+              
+            })
+
+
+          })
+      </script>  
+      
+   </head>
+
+   <body>
+      <h1>The Codingdojo Contact Creator </h1>
+      <div id='wrapper'>
+          <div id ='contact_enter'>
+            <form>
+              First Name: <input type="text" id="f_name" placeholder="First Name" class="inputarea"><br>
+              Last Name:  <input type="text" id="l_name" placeholder="Last Name" class="inputarea"><br>
+              Description:<textarea id="descrip" placeholder="Describe the contact" class="inputarea"></textarea><br>
+              <input type="submit" value="Add User">
+            </form>
+          </div>
+          <div id="contact_list">
+          </div>
+          <div><p></p></div>
+  
+      </div>
+   </body>
+</html>

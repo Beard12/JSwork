@@ -1,0 +1,49 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<title>Hover Practice</title>
+		<meta charset="utf-8">
+		<style>
+		
+		img{
+			display:inline-block;
+			margin-left:10px;
+		}
+
+
+		}
+		</style>
+		<meta name="description" content="Ninjas dissappear">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script>
+			$(document).ready(function(){
+
+				var origsrc;
+				var newsrc;
+				$('img').hover(
+					function(){
+						newsrc =$(this).attr('alt-src')
+						origsrc=$(this).attr('src')
+						$(this).attr('src',newsrc)
+
+					},function(){
+						$(this).attr('src',origsrc)
+					}
+				)
+
+			})
+		</script>
+	</head>
+	<body>
+			<img src="cat0.png" alt-src="ninja0.png">
+			<img src="cat1.png" alt-src="ninja1.png">
+			<img src="cat2.png" alt-src="ninja2.png">
+			<img src="cat3.png" alt-src="ninja3.png">
+			
+
+
+
+
+
+	</body>	
+</html>

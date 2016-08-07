@@ -1,0 +1,50 @@
+<html>
+   <head>
+     <title>The Date Validations</title>
+     <style>
+     #blank{
+      color:red;
+     }
+
+
+     </style>
+     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+     <script>
+      $(function() {
+        $( '#datepicker1' ).datepicker()
+      })
+      $(function() {
+        $( '#datepicker2' ).datepicker()
+      })
+
+      $(document).ready(function(){
+        $('form').submit(function(){
+          if($('#name').val() != ''){
+            alert('Thanks '+$('#name').val()+'. Your Cruise leaves on ' +$('#datepicker1').val()+' and returns on ' +$('#datepicker2').val()+'!')
+            $('#blank').html('<p id="blank"></p>')
+            return false
+          }
+          else if($('#name').val() =='')
+            $('#name').focus()
+            $('#blank').append('Your name cant be blank!')
+            $('#button').css('background-color','red').css('border','0px')
+            return false
+        })
+
+      })
+     </script>
+   </head>
+   <body>
+    <h1 id="header">Welcome to the Codingdojo plan a Cruise!</h1>
+    <form>
+      <p>Date: <input type="text" id="datepicker1" placeholder="02/10/2007"></p>
+      <p>Date: <input type="text" id="datepicker2" placeholder="02/22/2009"></p>
+      <p>Name: <input type="text" id="name" placeholder="Name"></p><p id="blank"></p>
+      <input type="submit" value="Check Dates" id="button">
+    </form>
+
+
+   </body>
+</html>

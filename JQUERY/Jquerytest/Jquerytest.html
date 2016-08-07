@@ -1,0 +1,119 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<title>jQuery</title>
+		<meta charset="utf-8">
+		<style>
+		.red{
+			color:red;
+			padding:10px;
+		}
+		</style>
+		<meta name="description" content="Wordstream...is the best internet marketing software ever...The best period.">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script>
+			$(document).ready(function(){
+
+
+				$('#firstbutton').click(
+					function(){
+						$('#firstquestion').append('<h2>Olympia, city of evergreens.</h2>') //question!
+						$('#firstbutton').hide()
+					}
+				)
+				$('#secondbutton').click(
+					function(){
+						$('#secquestion').after('<h2>Washington, the evergreen state</h2>')
+						$('#secondbutton').toggle()
+						
+					}
+				)
+				$('#thirdbutton').click(
+					function(){
+						$('#thirdquestion').before('<h2>Hypertext Markup Language</h2>')
+						$('#thirdbutton').slideToggle(1000)
+					}
+				)
+				$('#fourthbutton').click(
+					function(){
+						$('#fourthquestion').html('<h2>Definitely not 42</h2>')
+						$('#fourthbutton').slideUp(1000)
+					}
+				)
+				$('#fifthbutton').click(
+					function(){
+						$('#fifthquestion').fadeIn(1000)
+						$('#fifthbutton').fadeOut(500)
+
+					}
+				)
+				$('#sixthbutton').click(
+					function(){
+						$('#sixthquestion').text('Shaun of the Dead')
+						$('#sixthbutton').toggle()
+						$('.sevquestion').slideDown(2000)
+
+					}
+				)
+				$('#seventhbutton').click(
+					function(){
+						var idbutton1 = $('#firstbutton').attr('id')
+						$('#seventhquestion').text(idbutton1)
+						$('#seventhbutton').toggle()
+						$('.eigquestion').slideDown(2000)
+						$('#textbox1').focus()
+
+					}
+				)
+				$('#eigbutton').click(
+					function(){
+						var classbutton = $('#textbox1').val()
+						console.log(classbutton)
+						$('#eigbutton').addClass(classbutton)
+						$('#textbox1').toggle()
+						$('.finquestion').slideDown(2000)
+					}
+				)
+				$('#finbutton').click(
+					function(){
+						$('#finalh2').data("text","not a button")
+						$('span').text($('#finalh2').data("text"))
+					}
+				)
+
+			})
+		</script>
+	</head>
+	<body>
+		<h1>This is a test, this is only a test!</h1>
+		<h2 id="firstquestion">Question 1:What is the capital of Washington state?</h2>
+		<button id ="firstbutton">Press for Answer 1!</button>
+		<h2>Question 2:What state is Seattle in?</h2>
+		<div id="secquestion"></div>
+		<button id ="secondbutton">Press for Answer 2</button>
+		<h2>Question 3:What is the language used to create webpages?</h2>
+		<div id="thirdquestion"></div>
+		<button id="thirdbutton">Press for Answer 3</button>
+		<h2>Question 4:What is the meaning of life?</h2>
+		<div id="fourthquestion"></div>
+		<button id="fourthbutton">Press for Answer 4</button>
+		<h2>Question 5:Can dogs look up?</h2>
+		<h2 id="fifthquestion" hidden>No is the answer</h2>
+		<button id="fifthbutton">Press for Answer 5</button>
+		<h2>Question 6: What is the greatest movie of all time</h2>
+		<h2 id="sixthquestion"></h2>
+		<button id="sixthbutton">Press for Answer 6</button>
+		<h2 hidden class="sevquestion">Question 7: What is the id given to the first button?</h2>
+		<h2 hidden class="sevquestion" id="seventhquestion"></h2>
+		<button hidden class="sevquestion" id="seventhbutton">Press for Answer 7</button>
+		<h2 hidden class="eigquestion" id="">Please type red into the input box then press the button!</h2>
+		<input hidden type="text" class="eigquestion" id="textbox1">
+		<h2 hidden class="eigquestion"></h2>
+		<button hidden class="eigquestion" id="eigbutton">Press this button!</button>
+		<h2 hidden class="finquestion" id="finalh2">This h2 tag will change with the use of the .data method if you press that <span>button</span></h2>
+		<button hidden class="finquestion" id="finbutton">FINAL BUTTON</button>
+
+
+
+	</body>	
+</html>
